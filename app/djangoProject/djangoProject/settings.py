@@ -79,9 +79,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',  # Motor de base de datos para PostgreSQL
         'NAME': 'ObraSeg',                          # Nombre de la base de datos que creaste
-        'USER': 'Streeng1',                         # Usuario de PostgreSQL con permisos sobre esa base de datos
+        'USER': 'postgres',                         # Usuario de PostgreSQL con permisos sobre esa base de datos
         'PASSWORD': '28Denoviembre',                # Contraseña del usuario de PostgreSQL
-        'HOST': 'Streeng1.pythonanywhere-services.com',                        # Dirección del servidor, usualmente localhost si es en tu máquina
+        'HOST': 'localhost',                        # Dirección del servidor, usualmente localhost si es en tu máquina
         'PORT': '5432',                             # Puerto de conexión de PostgreSQL (5432 por defecto)
     }
 }
