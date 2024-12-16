@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&3$i2zicgeg6luydn9(a_fdf90_o7uad)_&000+v=6v6=u#m$k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['Streeng.pythonanywhere.com']
 
 
 # Application definition
@@ -79,9 +79,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',  # Motor de base de datos para PostgreSQL
         'NAME': 'ObraSeg',                          # Nombre de la base de datos que creaste
-        'USER': 'postgres',                         # Usuario de PostgreSQL con permisos sobre esa base de datos
+        'USER': 'Streeng1',                         # Usuario de PostgreSQL con permisos sobre esa base de datos
         'PASSWORD': '28Denoviembre',                # Contraseña del usuario de PostgreSQL
-        'HOST': 'localhost',                        # Dirección del servidor, usualmente localhost si es en tu máquina
+        'HOST': 'Streeng1.pythonanywhere-services.com',                        # Dirección del servidor, usualmente localhost si es en tu máquina
         'PORT': '5432',                             # Puerto de conexión de PostgreSQL (5432 por defecto)
     }
 }
@@ -122,6 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
